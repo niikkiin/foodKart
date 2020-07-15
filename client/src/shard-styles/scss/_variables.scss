@@ -1,7 +1,7 @@
 // Shards Dashboard Variables
 
 // New grays
-$fiord-blue:   #3D5170 !default;
+$fiord-blue:   #412D18 !default;
 $shuttle-gray: #5A6169 !default;
 $reagent-gray: #818EA3 !default;
 $mischka:      #CACEDB !default;
@@ -22,7 +22,7 @@ $new-grays: map-merge((
 // Override this color and recompile the package to quickly change
 // the general accent color theme.
 // $accent-color: theme-color('primary') !default;
-$accent-color: orange !default;
+$accent-color: #FDBD10 !default;
 
 
 // Text color adjustments
