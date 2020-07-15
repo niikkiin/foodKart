@@ -1,6 +1,6 @@
 <p align="center">
 <a href="#">
-<img src="assets/preview.png" width="250" />
+<img src="client/assets/preview.png" width="250" />
 </a>
 </p>
 
@@ -17,7 +17,7 @@ An open-source Food Delivery Services Application using MERN Stack.
 
 <p align="center">
   <a href="https://foodkart.netlify.com">
-    <img height="55px" src="assets/btn-live-preview.png" />
+    <img height="55px" src="client/assets/btn-live-preview.png" />
   </a>
 </p>
 
