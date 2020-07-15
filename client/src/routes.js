@@ -13,7 +13,10 @@ import Errors from "./views/Errors";
 import ComponentsOverview from "./views/ComponentsOverview";
 import Tables from "./views/Tables";
 import BlogPosts from "./views/BlogPosts";
-import SignUp from "./views/SignUp.component";
+
+import UserView from './views/admin/users.views';
+import DeliveryView from './views/admin/deliveries.views';
+import SignUpView from "./views/signup.views";
 
 export default [
   {
@@ -35,19 +38,19 @@ export default [
   {
     path: "/users",
     layout: DashboardLayout,
-    component: BlogOverview
+    component: UserView
   },
   {
     path: "/deliveries",
     layout: DashboardLayout,
-    component: BlogOverview
+    component: DeliveryView
   },
   {
     path: "/register",
     layout: DefaultLayout,
-    component: SignUp
+    component: SignUpView
   },
-
+  // INSERT LOGIN HERE
 
   {
     path: "/blog-overview",

@@ -6,7 +6,7 @@ import { Container, Row, Col } from "shards-react";
 import { ReactComponent as SignUpSVG } from '../assets/register/signUpSVG.svg';
 import RegisterAccountDetails from "../components/registration/register.component";
 
-const SignUp = () => (
+const SignUpView = () => (
   <Container fluid className="main-content-container bg-white">
     <Row className='m-5'>
       <Col
@@ -26,11 +26,11 @@ const SignUp = () => (
   </Container>
 );
 
-SignUp.propTypes = {
+SignUpView.propTypes = {
 
 };
 
-SignUp.defaultProps = {
+SignUpView.defaultProps = {
 };
 
-export default SignUp;
+export default SignUpView;
