@@ -6,7 +6,7 @@ import withTracker from "./withTracker";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 // import "./shard-styles/shards-dashboards.css";
-import "./shard-styles/scss/shards-dashboards.scss";
+import "./shard-styles/scss/main.scss";
 
 
 export default () => (

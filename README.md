@@ -58,6 +58,13 @@ Before you continue, ensure you have met the following requirements:
 
 <br />
 
+### Styling
+
+* All custom styles will be placed on `src/shards-styles/scss/_overrides.scss`.
+* Place new styles for a component inside `src/shards-styles/scss/components` and import to `src/shards-styles/scss/main.scss`.
+* All svg files and images should be placed on `src/assets` and to its corresponding category.
+
+
 ### Available Scripts
 
 ### `npm start`

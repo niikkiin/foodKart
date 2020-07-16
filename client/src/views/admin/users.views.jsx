@@ -11,7 +11,7 @@ const UserView = () => (
     <Row noGutters className="page-header py-4">
       <PageTitle
         title="Users"
-        subtitle="dashboard"
+        subtitle="overview"
         className="text-sm-left mb-3"
       />
     </Row>

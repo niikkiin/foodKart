@@ -15,6 +15,7 @@ import Tables from "./views/Tables";
 import BlogPosts from "./views/BlogPosts";
 
 import UserView from './views/admin/users.views';
+import DashboardView from './views/admin/dashboard.views';
 import DeliveryView from './views/admin/deliveries.views';
 import SignUpView from "./views/signup.views";
 
@@ -28,12 +29,12 @@ export default [
   {
     path: "/dashboard",
     layout: DashboardLayout,
-    component: BlogOverview
+    component: DashboardView
   },
   {
     path: "/merchants",
     layout: DashboardLayout,
-    component: BlogOverview
+    component: DashboardView
   },
   {
     path: "/users",
@@ -58,7 +59,7 @@ export default [
     component: BlogOverview
   },
   {
-    path: "/user-profile-lite",
+    path: "/user-profile",
     layout: DefaultLayout,
     component: UserProfileLite
   },

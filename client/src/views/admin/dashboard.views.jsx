@@ -1,19 +1,26 @@
 import React from "react";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import { Container, Row, Col } from "shards-react";
 
-import PageTitle from "./../components/common/PageTitle";
-import SmallStats from "./../components/common/SmallStats";
+// components
+import PageTitle from "../../components/common/PageTitle";
+import SmallStats from "./../../components/common/SmallStats";
+import OrdersOverview from "./../../components/deliveries/orders.component";
+import UsersByDevice from "./../../components/users/users-by-device.component";
+import NewDraft from "./../../components/blog/NewDraft";
+import Discussions from "./../../components/blog/Discussions";
+import TopReferrals from "./../../components/common/TopReferrals";
 
-import NewDraft from "./../components/blog/NewDraft";
-import Discussions from "./../components/blog/Discussions";
-import TopReferrals from "./../components/common/TopReferrals";
 
-const BlogOverview = ({ smallStats }) => (
+const DashboardView = ({ smallStats }) => (
   <Container fluid className="main-content-container px-4">
     {/* Page Header */}
     <Row noGutters className="page-header py-4">
-      <PageTitle title="Dashboard" subtitle="home" className="text-sm-left mb-3" />
+      <PageTitle
+        title="Dashboard"
+        subtitle="overview"
+        className="text-sm-left mb-3"
+      />
     </Row>
 
     {/* Small Stats Blocks */}
@@ -36,7 +43,15 @@ const BlogOverview = ({ smallStats }) => (
     </Row>
 
     <Row>
+      {/* Users Overview */}
+      <Col lg="8" md="12" sm="12" className="mb-4">
+        <OrdersOverview />
+      </Col>
 
+      {/* Users by Device */}
+      <Col lg="4" md="6" sm="12" className="mb-4">
+        <UsersByDevice />
+      </Col>
 
       {/* New Draft */}
       <Col lg="4" md="6" sm="12" className="mb-4">
@@ -56,17 +71,12 @@ const BlogOverview = ({ smallStats }) => (
   </Container>
 );
 
-BlogOverview.propTypes = {
-  /**
-   * The small stats dataset.
-   */
-  smallStats: PropTypes.array
-};
+DashboardView.propTypes = {};
 
-BlogOverview.defaultProps = {
+DashboardView.defaultProps = {
   smallStats: [
     {
-      label: "Posts",
+      label: "Restaurants",
       value: "2,390",
       percentage: "4.7%",
       increase: true,
@@ -77,14 +87,14 @@ BlogOverview.defaultProps = {
           label: "Today",
           fill: "start",
           borderWidth: 1.5,
-          backgroundColor: "rgba(0, 184, 216, 0.1)",
-          borderColor: "rgb(0, 184, 216)",
+          backgroundColor: "rgba(65, 45, 24, 0.1)",
+          borderColor: "rgb(65, 45, 24, 216)",
           data: [1, 2, 1, 3, 5, 4, 7]
         }
       ]
     },
     {
-      label: "Pages",
+      label: "Riders",
       value: "182",
       percentage: "12.4",
       increase: true,
@@ -102,7 +112,7 @@ BlogOverview.defaultProps = {
       ]
     },
     {
-      label: "Comments",
+      label: "reports",
       value: "8,147",
       percentage: "3.8%",
       increase: false,
@@ -161,4 +171,4 @@ BlogOverview.defaultProps = {
   ]
 };
 
-export default BlogOverview;
+export default DashboardView;
