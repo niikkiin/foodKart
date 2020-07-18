@@ -14,10 +14,12 @@ import ComponentsOverview from "./views/ComponentsOverview";
 import Tables from "./views/Tables";
 import BlogPosts from "./views/BlogPosts";
 
-import UserView from './views/admin/users.views';
-import DashboardView from './views/admin/dashboard.views';
-import DeliveryView from './views/admin/deliveries.views';
+import UserView from "./views/admin/users.views";
+import DashboardView from "./views/admin/dashboard.views";
+import DeliveryView from "./views/admin/deliveries.views";
 import SignUpView from "./views/signup.views";
+
+import MapSampleView from "./views/admin/map-sample.views";
 
 export default [
   {
@@ -35,6 +37,11 @@ export default [
     path: "/merchants",
     layout: DashboardLayout,
     component: DashboardView
+  },
+  {
+    path: "/map-sample",
+    layout: DashboardLayout,
+    component: MapSampleView
   },
   {
     path: "/users",
