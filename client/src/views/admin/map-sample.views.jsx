@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // import PropTypes from "prop-types";
-import { Container, Row, Col } from "shards-react";
+import { Container, Row, Col, FormInput } from "shards-react";
 
 // components
 import PageTitle from "../../components/common/PageTitle";
@@ -32,12 +32,12 @@ const iconHome = new L.Icon({
 
 const MapSampleView = () => {
   const [homeLocation] = useState({
-    homeLat: 14.293270,
-    homeLng: 122.665329
+    homeLat: 14.600376,
+    homeLng: 121.00674
   });
   const [riderLocation] = useState({
-    riderLat: 14.291410,
-    riderLng: 122.692513
+    riderLat: 14.601646,
+    riderLng: 121.004573
   });
 
   const { homeLat, homeLng } = homeLocation;
@@ -55,12 +55,34 @@ const MapSampleView = () => {
           className="text-sm-left mb-3"
         />
       </Row>
+      <Row className="mb-3">
+        <Col md="6">
+          <label htmlFor="homeAddress">Your Home Address</label>
+          <FormInput
+            id="homeAddress"
+            type="text"
+            placeholder="Address"
+            value="2042 Jose Abad Santos Street, Sta. Mesa, Manila"
+            onChange={() => {}}
+          />
+        </Col>
+        <Col md="6">
+          <label htmlFor="riderLocation">Rider's Current Location (temporary)</label>
+          <FormInput
+            id="riderLocation"
+            type="text"
+            placeholder="Rider's Current Location(temporary)"
+            value="Jollibee Pureza, Sta. Mesa, Manila"
+            onChange={() => {}}
+          />
+        </Col>
+      </Row>
       <Row>
         <Col>
-          <Map center={homePosition} zoom={14}>
+          <Map center={homePosition} zoom={19}>
             <TileLayer
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-              attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+              url=" https://api.mapbox.com/styles/v1/nikkiamyam/ckcrm7sio0zlb1iqu8a11wgv6/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoibmlra2lhbXlhbSIsImEiOiJja2Nya3RwN3QwOXRvMnlwNDVjd2wxaGM5In0.NWtijh6EpmpuCY_iXY1tPw"
+              attribution='Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery &copy; <a href="https://www.mapbox.com/">Mapbox</a>'
             />
             <Marker position={riderPosition} icon={iconRider}>
               <Popup>Jose Panganiban, Camarines Norte</Popup>
