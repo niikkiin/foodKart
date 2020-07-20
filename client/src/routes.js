@@ -14,6 +14,7 @@ import ComponentsOverview from "./views/ComponentsOverview";
 import Tables from "./views/Tables";
 import BlogPosts from "./views/BlogPosts";
 import SignUp from "./views/SignUp.component";
+import Login from "./views/Login.component";
 
 export default [
   {
@@ -48,6 +49,11 @@ export default [
     component: SignUp
   },
 
+  {
+    path: "/login",
+    layout: DefaultLayout,
+    component: Login
+  },
 
   {
     path: "/blog-overview",
