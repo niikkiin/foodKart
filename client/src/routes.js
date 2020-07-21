@@ -13,7 +13,13 @@ import Errors from "./views/Errors";
 import ComponentsOverview from "./views/ComponentsOverview";
 import Tables from "./views/Tables";
 import BlogPosts from "./views/BlogPosts";
-import SignUp from "./views/SignUp.component";
+
+import UserView from "./views/admin/users.views";
+import DashboardView from "./views/admin/dashboard.views";
+import DeliveryView from "./views/admin/deliveries.views";
+import SignUpView from "./views/signup.views";
+
+import MapSampleView from "./views/admin/map-sample.views";
 
 export default [
   {
@@ -25,29 +31,34 @@ export default [
   {
     path: "/dashboard",
     layout: DashboardLayout,
-    component: BlogOverview
+    component: DashboardView
   },
   {
     path: "/merchants",
     layout: DashboardLayout,
-    component: BlogOverview
+    component: DashboardView
+  },
+  {
+    path: "/map-sample",
+    layout: DashboardLayout,
+    component: MapSampleView
   },
   {
     path: "/users",
     layout: DashboardLayout,
-    component: BlogOverview
+    component: UserView
   },
   {
     path: "/deliveries",
     layout: DashboardLayout,
-    component: BlogOverview
+    component: DeliveryView
   },
   {
     path: "/register",
     layout: DefaultLayout,
-    component: SignUp
+    component: SignUpView
   },
-
+  // INSERT LOGIN HERE
 
   {
     path: "/blog-overview",
@@ -55,7 +66,7 @@ export default [
     component: BlogOverview
   },
   {
-    path: "/user-profile-lite",
+    path: "/user-profile",
     layout: DefaultLayout,
     component: UserProfileLite
   },

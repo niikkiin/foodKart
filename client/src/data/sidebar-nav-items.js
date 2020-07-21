@@ -21,5 +21,10 @@ export default function() {
       htmlBefore: '<i class="material-icons">store</i>',
       to: "/merchants",
     },
+    {
+      title: "Map Sample",
+      htmlBefore: '<i class="material-icons">map</i>',
+      to: "/map-sample",
+    },
   ];
 }
