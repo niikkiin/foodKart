@@ -25,7 +25,7 @@ const RegisterAccountDetails = ({ title }) => (
                     id="FullName"
                     placeholder="Full Name"
                     value="Nikki"
-                    onChange={() => {}}
+                    onChange={() => { }}
                   />
                 </Col>
               </Row>
@@ -38,7 +38,7 @@ const RegisterAccountDetails = ({ title }) => (
                     id="feEmail"
                     placeholder="Email Address"
                     value="nikki@example.com"
-                    onChange={() => {}}
+                    onChange={() => { }}
                     autoComplete="email"
                   />
                 </Col>
@@ -52,7 +52,7 @@ const RegisterAccountDetails = ({ title }) => (
                     id="password"
                     placeholder="Password"
                     value="EX@MPL#P@$$w0RD"
-                    onChange={() => {}}
+                    onChange={() => { }}
                     autoComplete="current-password"
                   />
                 </Col>
@@ -66,7 +66,7 @@ const RegisterAccountDetails = ({ title }) => (
                     id="confirmPassword"
                     placeholder="Password"
                     value="EX@MPL#P@$$w0RD"
-                    onChange={() => {}}
+                    onChange={() => { }}
                     autoComplete="current-password"
                   />
                 </Col>
