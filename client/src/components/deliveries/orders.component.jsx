@@ -5,7 +5,7 @@ import { Row, Col, Card, CardHeader, CardBody, Button } from "shards-react";
 import RangeDatePicker from "../common/RangeDatePicker";
 import Chart from "../../utils/chart";
 
-class UsersOverview extends React.Component {
+class OrdersOverview extends React.Component {
   constructor(props) {
     super(props);
 
@@ -68,21 +68,21 @@ class UsersOverview extends React.Component {
       ...this.props.chartOptions
     };
 
-    const BlogUsersOverview = new Chart(this.canvasRef.current, {
+    const DeliveryOrdersOverview = new Chart(this.canvasRef.current, {
       type: "LineWithLine",
       data: this.props.chartData,
       options: chartOptions
     });
 
     // They can still be triggered on hover.
-    const buoMeta = BlogUsersOverview.getDatasetMeta(0);
+    const buoMeta = DeliveryOrdersOverview.getDatasetMeta(0);
     buoMeta.data[0]._model.radius = 0;
     buoMeta.data[
       this.props.chartData.datasets[0].data.length - 1
     ]._model.radius = 0;
 
     // Render the chart.
-    BlogUsersOverview.render();
+    DeliveryOrdersOverview.render();
   }
 
   render() {
@@ -117,7 +117,7 @@ class UsersOverview extends React.Component {
   }
 }
 
-UsersOverview.propTypes = {
+OrdersOverview.propTypes = {
   /**
    * The component's title.
    */
@@ -132,8 +132,8 @@ UsersOverview.propTypes = {
   chartOptions: PropTypes.object
 };
 
-UsersOverview.defaultProps = {
-  title: "Users Overview",
+OrdersOverview.defaultProps = {
+  title: "Orders Overview",
   chartData: {
     labels: Array.from(new Array(30), (_, i) => (i === 0 ? 1 : i)),
     datasets: [
@@ -172,8 +172,8 @@ UsersOverview.defaultProps = {
           3100,
           4250
         ],
-        backgroundColor: "rgba(0,123,255,0.1)",
-        borderColor: "rgba(0,123,255,1)",
+        backgroundColor: "rgba(251,192,45,0.1)",
+        borderColor: "rgba(251,192,45,1)",
         pointBackgroundColor: "#ffffff",
         pointHoverBackgroundColor: "rgb(0,123,255)",
         borderWidth: 1.5,
@@ -229,4 +229,4 @@ UsersOverview.defaultProps = {
   }
 };
 
-export default UsersOverview;
+export default OrdersOverview;

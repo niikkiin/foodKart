@@ -9,13 +9,21 @@ import {
   FormInput,
   Button
 } from "shards-react";
+import { OrGroup } from "../common/or.component";
 
 const RegisterAccountDetails = ({ title }) => (
   <>
     <ListGroup flush>
       <ListGroupItem className="p-3">
         <Row>
-          <Col>
+          <Col md='12'>
+          <Button className='btn-block' theme="danger">Sign up with Google</Button>
+          <Button className='btn-block' theme="primary">Sign up with Facebook</Button>
+          </Col>
+          <Col md='12'>
+            <OrGroup />
+          </Col>
+          <Col md='12'>
             <Form>
               <Row form>
                 {/* First Name */}
@@ -25,7 +33,7 @@ const RegisterAccountDetails = ({ title }) => (
                     id="FullName"
                     placeholder="Full Name"
                     value="Nikki"
-                    onChange={() => {}}
+                    onChange={() => { }}
                   />
                 </Col>
               </Row>
@@ -38,7 +46,7 @@ const RegisterAccountDetails = ({ title }) => (
                     id="feEmail"
                     placeholder="Email Address"
                     value="nikki@example.com"
-                    onChange={() => {}}
+                    onChange={() => { }}
                     autoComplete="email"
                   />
                 </Col>
@@ -52,12 +60,12 @@ const RegisterAccountDetails = ({ title }) => (
                     id="password"
                     placeholder="Password"
                     value="EX@MPL#P@$$w0RD"
-                    onChange={() => {}}
+                    onChange={() => { }}
                     autoComplete="current-password"
                   />
                 </Col>
               </Row>
-              <Row form>
+              <Row form className='d-flex align-content-center justify-content-center'>
                 {/* Confirm Password */}
                 <Col md="12" className="form-group">
                   <label htmlFor="confirmPassword">Confirm Password</label>
@@ -66,14 +74,12 @@ const RegisterAccountDetails = ({ title }) => (
                     id="confirmPassword"
                     placeholder="Password"
                     value="EX@MPL#P@$$w0RD"
-                    onChange={() => {}}
+                    onChange={() => { }}
                     autoComplete="current-password"
                   />
                 </Col>
-              </Row>
-              <Row form className="text-center">
-                <Col md="12">
-                  <Button theme="accent">Submit</Button>
+                <Col className='text-center' md="12">
+                  <Button theme="accent">Create new account</Button>
                 </Col>
               </Row>
             </Form>

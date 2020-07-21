@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import { Container, Row, Col } from "shards-react";
 
 const DefaultLayout = ({ children }) => (
-  <Container fluid className='' style={{ display: 'flex', height: '100vh', justifyContent: 'center', alignItems: 'center'}}>
-    <Row className="">
+  <Container fluid className='mt-5 pt-5' style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+    <Row>
       <Col
         className="p-0"
         lg="12"
