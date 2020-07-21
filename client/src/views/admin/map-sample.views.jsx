@@ -45,6 +45,8 @@ const MapSampleView = () => {
   const riderPosition = [riderLat, riderLng];
   const homePosition = [homeLat, homeLng];
 
+
+  
   return (
     <Container fluid className="main-content-container px-4">
       {/* Page Header */}
