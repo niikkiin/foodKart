@@ -1,9 +1,15 @@
 import React from "react";
-import { Redirect } from "react-router-dom";
+import {
+  Redirect
+} from "react-router-dom";
 
 // Layout Types
-import { DefaultLayout } from "./layouts";
-import { DashboardLayout } from "./layouts";
+import {
+  DefaultLayout
+} from "./layouts";
+import {
+  DashboardLayout
+} from "./layouts";
 
 // Route Views
 import BlogOverview from "./views/BlogOverview";
@@ -14,7 +20,7 @@ import ComponentsOverview from "./views/ComponentsOverview";
 import Tables from "./views/Tables";
 import BlogPosts from "./views/BlogPosts";
 
-import Login from "./views/Login.component";
+import Login from "./views/Login.views";
 import UserView from "./views/admin/users.views";
 import DashboardView from "./views/admin/dashboard.views";
 import DeliveryView from "./views/admin/deliveries.views";
@@ -22,12 +28,11 @@ import SignUpView from "./views/signup.views";
 
 import MapSampleView from "./views/admin/map-sample.views";
 
-export default [
-  {
+export default [{
     path: "/",
     exact: true,
     layout: DashboardLayout,
-    component: () => <Redirect to="/dashboard" />
+    component: () => < Redirect to = "/dashboard" / >
   },
   {
     path: "/dashboard",

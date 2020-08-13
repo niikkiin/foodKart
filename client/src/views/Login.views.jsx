@@ -6,22 +6,22 @@ import { Container, Row, Col } from "shards-react";
 import { ReactComponent as SignUpSVG } from "../assets/register/signInSVG.svg";
 import LoginAccountDetails from "../components/registration/login.component";
 
-const Login = () => (
-  <Container fluid className="main-content-container bg-white">
-    <Row className="m-5">
-      <Col lg="8" md="12" sm="12">
+const LoginView = () => (
+  <Container fluid className="bg-white">
+    <Row>
+      <Col xl="8" lg="8" md="8" sm="12" xs="12">
         <SignUpSVG />
       </Col>
-      <Col lg="4" md="12" sm="12">
-        <h2 className="text-center">Login</h2>
+      <Col xl="4" lg="4" md="4" sm="12" xs="12">
+        <h3 className="text-center font-weight-bolder">Sign in  to FoodKart</h3>
         <LoginAccountDetails />
       </Col>
     </Row>
   </Container>
 );
 
-Login.propTypes = {};
+LoginView.propTypes = {};
 
-Login.defaultProps = {};
+LoginView.defaultProps = {};
 
-export default Login;
+export default LoginView;
